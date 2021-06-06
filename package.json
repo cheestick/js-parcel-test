@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
-  }, 
+    "build": "parcel build src/index.html --public-url /js-parcel-test/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cheestick/js-parcel-test.git"
@@ -20,8 +22,12 @@
   "bugs": {
     "url": "https://github.com/cheestick/js-parcel-test/issues"
   },
-  "homepage": "https://github.com/cheestick/js-parcel-test#readme",
+  "homepage": "https://cheestick.github.io/js-parcel-test/",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.0"
   }
 }

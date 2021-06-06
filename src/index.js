@@ -1,1 +1,1 @@
-console.log('hellowowowowow');
+console.log(document.title);
